@@ -1,0 +1,9 @@
+# 環境変数ファイル
+.env
+
+# 処理済み「いいね」ファイル
+processed_likes.json
+
+# Pythonのキャッシュ
+__pycache__/
+*.pyc
