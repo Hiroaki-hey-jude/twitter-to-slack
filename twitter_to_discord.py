@@ -3,16 +3,17 @@ import requests
 import os
 import json
 import logging
+import config
 
 # ロギングの設定
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # 環境変数から認証情報を取得
-TWITTER_API_KEY = os.getenv('TWITTER_API_KEY')
-TWITTER_API_SECRET_KEY = os.getenv('TWITTER_API_SECRET_KEY')
-TWITTER_ACCESS_TOKEN = os.getenv('TWITTER_ACCESS_TOKEN')
-TWITTER_ACCESS_TOKEN_SECRET = os.getenv('TWITTER_ACCESS_TOKEN_SECRET')
-DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL')
+TWITTER_API_KEY = config.TWITTER_API_KEY
+TWITTER_API_SECRET_KEY = config.TWITTER_API_SECRET_KEY
+TWITTER_ACCESS_TOKEN = config.TWITTER_ACCESS_TOKEN
+TWITTER_ACCESS_TOKEN_SECRET = config.TWITTER_ACCESS_TOKEN_SECRET
+DISCORD_WEBHOOK_URL = config.DISCORD_WEBHOOK_URL
 
 # 特定のドメインを設定（QiitaとZenn）
 TARGET_DOMAINS = ['qiita.com', 'zenn.dev']
